@@ -1,6 +1,7 @@
 <?php
 require "functions.php";
 require "Database.php";
+//amin
 //require "router.php";
 
 //connect to our database Mysql
