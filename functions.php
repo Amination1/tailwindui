@@ -1,13 +1,13 @@
 <?php
-//function dd($value): void
-//{
-//    echo "<pre>";
-//    print_r($value);
-//    echo "</pre>";
-//
-//
-//    die();
-//}
+function dd($value): void
+{
+    echo "<pre>";
+    print_r($value);
+    echo "</pre>";
+
+
+    die();
+}
 
 
 function urlis($value): bool
