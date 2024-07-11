@@ -5,10 +5,13 @@ require "Database.php";
 
 //connect to our database Mysql
 
+$config = require "config.php";
 
-$db = new Database();
 
-$post = $db->query("SELECT * FROM posts")->fetch(PDO::FETCH_ASSOC);
 
-dd($post['title']);
+$db = new Database($config['database']);
+
+$posts = $db->query("SELECT * FROM posts")->fetchAll();
+
+dd($posts);
 
