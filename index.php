@@ -4,7 +4,7 @@ require "Database.php";
 
 //require "router.php";
 
-//connect to our database Mysql.
+//connect to our database Mysql
 
 $config = require "config.php";
 
