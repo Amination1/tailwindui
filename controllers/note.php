@@ -11,9 +11,6 @@ $note = $db->query('select * from notes where id = :id', [
 ])->findOrFail();
 
 
-
-if ($note['user_id'] != $currentuserid){
-    abort(RESPONSE::FORBIDDEN);
-}
+authorized($note['user_id'] == $currentuserid);
 
 require 'view/note.view.php';
