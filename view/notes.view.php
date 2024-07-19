@@ -5,8 +5,9 @@
 
 <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-        <!-- Your content -->
-        <h1>Now you are in the notes page!</h1>
+        <?php foreach ($notes as $note) : ?>
+        <li><?= $note['body'] ?></li>
+        <?php endforeach; ?>
     </div>
 </main>
 
