@@ -1,6 +1,5 @@
 <?php
 
-
-view('contact.view.php', [
-    'banner' => 'Contact Us',
+view("contact.view.php", [
+    'heading' => 'Contact Us',
 ]);

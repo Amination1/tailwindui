@@ -1,23 +1,17 @@
 <?php
 
-const BASE_PATH = __DIR__.'/../';
+const BASE_PATH = __DIR__ . '/../';
 
-require BASE_PATH . 'core/functions.php';
+require BASE_PATH . 'Core/functions.php';
 
-
-spl_autoload_register(function ($class){
-
+spl_autoload_register(function ($class) {
+    // Core\Database
     $class = str_replace('\\', DIRECTORY_SEPARATOR, $class);
 
-    require(base_path($class. '.php'));
+//    echo dirname($class);
+    require base_path("{$class}.php");
 });
 
-
-require base_path("core/router.php");
-
-
-
-
-
+require base_path('Core/router.php');
 
 

@@ -1,6 +1,5 @@
 <?php
 
-
-view('index.view.php', [
-    'banner' => 'Home page',
+view("index.view.php", [
+    'heading' => 'Home',
 ]);
