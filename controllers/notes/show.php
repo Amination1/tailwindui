@@ -1,8 +1,10 @@
 <?php
-$config = require "config.php";
+
+use Core\Database;
+
+$config = require base_path("config.php");
 $db = new Database($config['database']);
 
-$banner = "Note";
 $currentuserid = 1;
 
 
@@ -13,4 +15,9 @@ $note = $db->query('select * from notes where id = :id', [
 
 authorized($note['user_id'] == $currentuserid);
 
-require 'view/note.view.php';
+
+
+view('notes/show.view.php', [
+    'banner' => 'Note',
+    'note' => $note,
+]);

@@ -1,6 +1,6 @@
-<?php require "partials/head.php"; ?>
-<?php require "partials/nav.php"; ?>
-<?php require "partials/banner.php"; ?>
+<?php require base_path("view/partials/head.php"); ?>
+<?php require base_path("view/partials/nav.php"); ?>
+<?php require base_path("view/partials/banner.php"); ?>
 
 
 <main>
@@ -49,4 +49,4 @@
     </div>
 </main>
 
-<?php require "partials/footer.php"; ?>
+<?php require base_path("view/partials/footer.php"); ?>

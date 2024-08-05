@@ -1,5 +1,6 @@
 <?php
 
-$banner = "Home page";
 
-require 'view/index.view.php';
+view('index.view.php', [
+    'banner' => 'Home page',
+]);

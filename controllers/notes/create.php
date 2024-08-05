@@ -1,18 +1,20 @@
 <?php
-$banner = 'Create new note';
-require 'Validator.php';
+
+use Core\Database;
+use Core\Validator;
+
+require base_path('Validator.php');
 
 
-$config = require "config.php";
+$config = require base_path("config.php");
 $db = new Database($config['database']);
 
-
+$errors = [];
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $errors = [];
 
-    $validator = new Validator();
+
 
     if (! Validator::string($_POST['body'],1 ,1000)) {
         $errors['body'] = 'Body is required';
@@ -28,4 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 }
 
-require 'view/note-create.view.php';
+
+view('notes/create.view.php', [
+    'banner' => 'Create a new note',
+    'errors' => $errors,
+]);
