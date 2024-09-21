@@ -8,8 +8,8 @@ $router->get('/notes', 'notes/index.php')->only('auth');
 $router->get('/note', 'notes/show.php');
 $router->delete('/note', 'notes/destroy.php');
 
-$router->get('/note/edit', 'controllers/notes/edit.php');
-$router->patch('/note', 'controllers/notes/update.php');
+$router->get('/note/edit', 'notes/edit.php');
+$router->patch('/note', 'notes/update.php');
 
 $router->get('/notes/create', 'notes/create.php');
 $router->post('/notes', 'notes/store.php');
