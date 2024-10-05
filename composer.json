@@ -1,0 +1,25 @@
+{
+
+    "name": "amin/tailwindui",
+    "authors": [
+        {
+            "name": "amin",
+            "email": "seyyed.amin.8809@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/collections": "^11.26"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "Http\\": "Http/"
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.2"
+    },
+    "config": {
+        "allow-plugins": true
+    }
+}
