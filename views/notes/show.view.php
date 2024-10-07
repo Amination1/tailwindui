@@ -7,7 +7,9 @@
         <p class="mb-6">
             <a href="/notes" class="text-blue-500 underline">go back...</a>
         </p>
-
+        <div style="text-align: center; padding-bottom: 3px;border: 2px solid;border-radius: 50px;margin-bottom: 5px">
+            <h1><?= htmlspecialchars($note['name']) ?></h1>
+        </div>
         <p><?= htmlspecialchars($note['body']) ?></p>
 
         <footer class="mt-6">

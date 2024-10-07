@@ -14,8 +14,25 @@
                         <div class="space-y-6 bg-white px-4 py-5 sm:p-6">
                             <div>
                                 <label
+                                        for="name"
+                                        class="block text-sm font-medium text-gray-700"
+                                >Name</label>
+
+                                <textarea
+                                        id="name"
+                                        name="name"
+                                        rows="1"
+                                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                        placeholder="Here's an idea for a name of note..."
+                                ><?= $note['name'] ?></textarea>
+
+                                <?php if (isset($errors['name'])) : ?>
+                                    <p class="text-red-500 text-xs mt-2"><?= $errors['name'] ?></p>
+                                <?php endif; ?>
+
+                                <label
                                     for="body"
-                                    class="block text-sm font-medium text-gray-700"
+                                    class="block text-sm font-medium text-gray-700 mt-10"
                                 >Body</label>
 
                                 <div class="mt-1">

@@ -8,7 +8,8 @@
         }
     ],
     "require": {
-        "illuminate/collections": "^11.26"
+        "illuminate/collections": "^11.26",
+      "ext-pdo": "*"
     },
     "autoload": {
         "psr-4": {

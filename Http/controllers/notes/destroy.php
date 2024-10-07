@@ -2,10 +2,13 @@
 
 use Core\App;
 use Core\Database;
+use Core\User;
 
 $db = App::resolve(Database::class);
 
-$currentUserId = 1;
+$user = new User();
+
+$currentUserId = $user->user()['id'];
 
 $note = $db->query('select * from notes where id = :id', [
     'id' => $_POST['id']
